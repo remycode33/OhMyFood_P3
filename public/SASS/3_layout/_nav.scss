@@ -1,0 +1,36 @@
+.box-localisation {
+  height:65px;
+  width:100vw;
+  background: linear-gradient(360deg, #EAEAEA 90%, #CACACA);
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width:100vw;
+  border:1px solid orange;
+  text-align: center;
+}
+.box-localisation {
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid blue;
+}
+.icon-map {
+  width: 15px;
+}
+
+.order-process{
+  display:flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  h2 {
+    align-self: flex-start;
+  }
+}
+

@@ -1,0 +1,41 @@
+// BOX SIZING RULES
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+//REMOVE DEFAULT MARGIN
+*, html, body,p, h1,h2,h3,h4,li, ul, figure{
+  margin : 0px;
+}
+
+// MAKE IMAGE EASIER TO WORK
+img {
+  max-width: 100%;
+  display: block;
+}
+//LIST
+
+li{
+  list-style: none;
+}
+
+// SCROLL
+html {
+  scroll-behavior: smooth;
+}
+// LINKS
+*:visited {
+  color:#9356DC;
+}
+
+*:link {
+  color:#FF79DA;
+}
+
+//RESET select
+select, option {
+  background-color:transparent;
+  border:none;
+  appearance: none;
+  text-align:center;
+  cursor: pointer;
+}

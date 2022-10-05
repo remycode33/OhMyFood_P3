@@ -1,0 +1,25 @@
+{
+  "name": "ohmyfood-sass-writting",
+  "version": "1.0.0",
+  "description": "P3 formation OpenClassRooms",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./main.scss:../css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/remycode33/OhMyFood_P3_OCR.git"
+  },
+  "keywords": [
+    "ohmyfood",
+    "restaurant",
+    "paris",
+    "menu"
+  ],
+  "author": "Rémy Asselin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/remycode33/OhMyFood_P3_OCR/issues"
+  },
+  "homepage": "https://github.com/remycode33/OhMyFood_P3_OCR#readme"
+}
