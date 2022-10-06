@@ -6,6 +6,9 @@ footer{
   background-color: $background-footer;
   padding:20px 20px;
   line-height:1.5em;
+  li:hover {
+    text-decoration: underline;
+  }
   svg{
     width:100px;
   }

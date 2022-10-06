@@ -12,4 +12,7 @@
     cursor:pointer;
     box-shadow:inset #AAA 0px 0px 10px;
   }
+  &:active {
+    box-shadow: inset darken($primary-colour,7%) 0px 0px 10px;
+  }
 }

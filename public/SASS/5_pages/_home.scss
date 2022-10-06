@@ -53,11 +53,38 @@ nav {
 
 //main__process
 
- main{
-   padding:50px 20px 67px 20px;
+ main {
+   padding-top: 50px;
+
+   .card-container {
+     background-color: $soft-grey;
+     .restaurant-card {
+       &:hover > .heading-card__heading {
+         text-decoration: underline;
+       }
+     }
+   }
+
+   section {
+     padding: 0px 20px;
+
+     &:nth-child(2) {
+       padding-top: 50px;
+     }
+
+     a:visited {
+       color: black;
+       text-decoration: none;
+     }
+
+     a:link {
+       color: black;
+       text-decoration: none;
+     }
+   }
  }
 
- .flex-process {
+.flex-process {
    display:flex;
    flex-flow: column wrap;
    justify-content: space-between;
@@ -107,4 +134,6 @@ nav {
      }
    }
  }
+
+
 

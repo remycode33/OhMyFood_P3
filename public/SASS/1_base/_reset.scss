@@ -8,6 +8,11 @@
   padding:0px;
 }
 
+//GIVE to body a height relative for loading-sp
+body{
+  position:relative;
+}
+
 // MAKE IMAGE EASIER TO WORK
 img {
   max-width: 100%;
