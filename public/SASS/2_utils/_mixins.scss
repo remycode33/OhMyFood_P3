@@ -1,0 +1,8 @@
+/*@button ($width:20px,$height:10px,$color:red){
+  width:$witdh;
+  height:$height;
+}*/
+
+@mixin button-boxShadow {
+  box-shadow : #DDD 0px 4px 8px;
+}

@@ -1,1 +1,20 @@
 /*# sourceMappingURL=footer.css.map */
+footer{
+  display:flex;
+  flex-flow: column wrap;
+  height:197px;
+  background-color: $background-footer;
+  padding:20px 20px;
+  line-height:1.5em;
+  svg{
+    width:100px;
+  }
+  ul {
+    padding: 0px;
+    svg {
+      width: 14px;
+      height: 14px;
+      margin-right: 10px;
+    }
+  }
+}

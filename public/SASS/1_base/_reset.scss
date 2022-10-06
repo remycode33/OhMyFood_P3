@@ -3,8 +3,9 @@
   box-sizing: border-box;
 }
 //REMOVE DEFAULT MARGIN
-*, html, body,p, h1,h2,h3,h4,li, ul, figure{
+*, html, body,p, h1,h2,h3,h4,li, ul, ol, figure{
   margin : 0px;
+  padding:0px;
 }
 
 // MAKE IMAGE EASIER TO WORK
@@ -33,9 +34,15 @@ html {
 
 //RESET select
 select, option {
+  position:relative;
   background-color:transparent;
   border:none;
   appearance: none;
   text-align:center;
   cursor: pointer;
+}
+
+//RULES
+html, body {
+  width: 100vw;
 }

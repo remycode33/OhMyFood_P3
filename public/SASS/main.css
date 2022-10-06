@@ -19,6 +19,11 @@ h3 {
   font-weight: normal;
 }
 
+h4 {
+  font-size: 10px;
+  font-weight: normal;
+}
+
 nav .box-localisation {
   font-size: 10px;
   font-weight: normal;
@@ -74,6 +79,10 @@ select, option {
   cursor: pointer;
 }
 
+/*@button ($width:20px,$height:10px,$color:red){
+  width:$witdh;
+  height:$height;
+}*/
 /*# sourceMappingURL=footer.css.map */
 header {
   display: flex;
@@ -130,7 +139,7 @@ button {
   width: 300px;
   height: 50px;
   border: none;
-  background: radial-gradient(10% 0%, closest-side, #FF79DA 5%, #9356DC 95%);
+  background: radial-gradient(10% 50%, red, #9356DC);
 }
 
 /*# sourceMappingURL=home.css.map */

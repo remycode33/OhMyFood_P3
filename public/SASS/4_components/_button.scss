@@ -1,6 +1,15 @@
-button {
-  width:300px;
-  height:50px;
-  border:none;
-  background:radial-gradient(10% 0%, closest-side, $secondary-colour 5%, $primary-colour 95%);
+.button {
+  width: 220px;
+  height: 50px;
+  border: none;
+  border-radius: 50px;
+  color: white;
+  &--explorer {
+    background-image: radial-gradient(farthest-corner at 20% -40%, $secondary-colour 10%, $primary-colour 100%);
+    @include button-boxShadow;
+  }
+  &:hover {
+    cursor:pointer;
+    box-shadow:inset #AAA 0px 0px 10px;
+  }
 }
