@@ -13,6 +13,6 @@
     box-shadow:inset #AAA 0px 0px 10px;
   }
   &:active {
-    box-shadow: inset darken($primary-colour,7%) 0px 0px 10px;
+    box-shadow: inset darken($primary-colour,5%) 0px 0px 20px;
   }
 }

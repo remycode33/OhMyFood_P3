@@ -1,103 +1,138 @@
 .loading-spinner {
-  display:initial;
+  display:flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  z-index:9;
+  opacity:100%;
+  transform:scale(1);
+  overflow:hidden;
   position: absolute;
   inset: 0px 0px;
   background-image: url("../pictures/images/logo/ohmyfood.png");
   background-repeat: no-repeat;
   background-color: white;
-  background-position: 50% 66vh;
+  background-position: 50% 75vh;
   background-size: 350px;
   animation-name: active-loading-spinner;
-  animation-duration: 5.5s;
+  animation-duration: 0s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
 
   &::after {
     content: "loading";
     position: absolute;
-    top: 83vh;
+    top: 92vh;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 27px;
+    font-size: 3vmax;
   }
 
   .container-spinner {
+    width:fit-content;
+    height:fit-content;
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: center;
     position:absolute;
-    border:2px solid red;
+    top:20vh;
+    transform:rotate(0deg);
     animation-name: spinner-1;
-    animation-duration: 5s;
+    animation-duration: 3.5s;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
     animation-iteration-count: infinite;
-    transform: rotate(0deg);
+    animation-timing-function: ease-in;
 
     .spinner{
-      max-width:280px;
-      max-height: 280px;
+      display:flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      align-items:center;
       position:absolute;
-      top:30vh;
-      left:70vw;
     }
     .outside {
-      width: 66vw;
-      height: 66vw;
-      border-left: 15px solid $primary-colour;
+      width:50vmin;
+      height: 50vmin;
+      position:relative;
+      border: 15px solid $primary-colour;
+      border-left:none;
+      border-right:none;
+      border-bottom:none;
       border-radius: 50%;
-
+      transform:rotate(0deg);
       animation-name: spinner-2;
-      animation-duration: 5s;
+      animation-duration: 3.8s;
+      animation-delay: 1.2s;
+      animation-fill-mode: forwards;
       animation-iteration-count: infinite;
+      animation-timing-function: ease-in;
+
     }
 
     .middle {
-      width: 50vw;
-      height: 50vw;
-      border-left: 15px solid $secondary-colour;
+      width:45vmin;
+      height: 45vmin;
+      border: 15px solid $secondary-colour;
+      border-left:none;
+      border-right:none;
+      border-bottom:none;
       border-radius: 50%;
-
-      animation-name: spinner-3;
-      animation-duration: 5s;
+      transform:rotate(0deg);
+     animation-name: spinner-3;
+      animation-duration: 4.5s;
+      animation-delay: 0.5s;
+      animation-fill-mode: forwards;
       animation-iteration-count: infinite;
+      animation-timing-function: ease-in;
+
     }
 
     .inner {
-      width: 40vw;
-      height: 40vw;
-      border-left: 15px solid $tertiary-colour;
+      width:40vmin;
+      height: 40vmin;
+      border: 15px solid $tertiary-colour;
+      border-left:none;
+      border-right:none;
+      border-bottom:none;
       border-radius: 50%;
-
-      animation-name: spinner-4;
+      transform:rotate(0deg);
+     animation-name: spinner-4;
+      animation-timing-function: ease-in;
       animation-duration: 5s;
+      animation-delay: 0s;
+      animation-fill-mode: forwards;
       animation-iteration-count: infinite;
+
     }
   }
 }
 
 @keyframes spinner-1 {
-  0% {transform:rotate(0%)
-  }
-  100% {transform:rotate(360deg)
-  }
+  0% {transform:rotate(0deg)}
+  100% {transform:rotate(1800deg)}
 }
 
 @keyframes spinner-2 {
-  0% {transform:rotate(0%)
-  }
-  100% {transform:rotate(630deg)
-  }
+  0% {transform:rotate(0deg)}
+  100% {transform:rotate(2500deg)}
 }
 
 @keyframes spinner-3 {
-  0% {transform:rotate(0%)
+  0% {transform:rotate(0deg)
   }
   100% {transform:rotate(720deg)
   }
 }
 
 @keyframes spinner-4 {
-  0% {transform:rotate(0%)
+  0% {transform:rotate(0deg)
   }
-  100% {transform:rotate(270deg)
+  100% {transform:rotate(1550deg)
   }
 }
 
 @keyframes active-loading-spinner {
-  0% {display:initial}
-  100% {display:none}
+  0% {opacity:100%; transform:scale(1);}
+  100% {opacity:0%; transform:scale(0);}
 }

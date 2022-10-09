@@ -159,34 +159,71 @@ header img {
   box-shadow: inset #AAA 0px 0px 10px;
 }
 .button:active {
-  box-shadow: inset #8038d6 0px 0px 10px;
+  box-shadow: inset #8641d8 0px 0px 20px;
 }
 
-.restaurant-card {
+.card-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  max-height: 1228px;
+  padding-bottom: 53px;
+}
+.card-container a:nth-child(2) img {
+  object-position: 50% 80%;
+}
+.card-container a:nth-child(3) img {
+  object-position: 50% 60%;
+}
+.card-container a:nth-child(4) img {
+  object-position: bottom;
+}
+.card-container a:nth-child(5) img {
+  object-position: bottom;
+}
+.card-container h1 {
+  width: 100%;
+  padding-bottom: 27px;
+  padding-left: 20px;
+}
+.card-container .restaurant-card {
   width: 337px;
   height: 253px;
+  margin: 9px 20px;
   background-color: white;
   border-radius: 20px;
 }
-.restaurant-card .restaurant-card__photo {
+.card-container .restaurant-card .restaurant-card__photo {
   position: relative;
 }
-.restaurant-card .restaurant-card__photo img {
+.card-container .restaurant-card .restaurant-card__photo img {
   width: 100%;
   height: 174px;
   object-fit: cover;
-  object-position: center;
   border-radius: 20px 20px 0px 0px;
 }
-.restaurant-card .restaurant-card__title {
-  font-size: 20px;
-  font-weight: bold;
+.card-container .restaurant-card .heading-card__heading {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 80px;
+  padding: 18px 10px;
+  flex-flow: column wrap;
+  justify-content: space-between;
 }
-.restaurant-card .restaurant-card__place {
-  font-size: 20px;
-  font-weight: lighter;
+.card-container .restaurant-card .heading-card__heading .restaurant-card__title {
+  width: 100%;
+  font-size: 18px;
+  font-weight: 550;
+  line-height: 1em;
 }
-.restaurant-card .new:after {
+.card-container .restaurant-card .restaurant-card__place {
+  width: 100%;
+  font-size: 16.5px;
+  line-height: 1em;
+  font-weight: 350;
+}
+.card-container .restaurant-card .new:after {
   content: "Nouveau";
   position: absolute;
   top: 15px;
@@ -199,87 +236,126 @@ header img {
 }
 
 .loading-spinner {
-  display: initial;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  z-index: 9;
+  opacity: 100%;
+  transform: scale(1);
+  overflow: hidden;
   position: absolute;
   inset: 0px 0px;
   background-image: url("../pictures/images/logo/ohmyfood.png");
   background-repeat: no-repeat;
   background-color: white;
-  background-position: 50% 66vh;
+  background-position: 50% 75vh;
   background-size: 350px;
   animation-name: active-loading-spinner;
-  animation-duration: 5.5s;
+  animation-duration: 0s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
 }
 .loading-spinner::after {
   content: "loading";
   position: absolute;
-  top: 83vh;
+  top: 92vh;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 27px;
+  font-size: 3vmax;
 }
 .loading-spinner .container-spinner {
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
   position: absolute;
-  border: 2px solid red;
-  animation-name: spinner-1;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
+  top: 20vh;
   transform: rotate(0deg);
+  animation-name: spinner-1;
+  animation-duration: 3.5s;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
 }
 .loading-spinner .container-spinner .spinner {
-  max-width: 280px;
-  max-height: 280px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
   position: absolute;
-  top: 30vh;
-  left: 70vw;
 }
 .loading-spinner .container-spinner .outside {
-  width: 66vw;
-  height: 66vw;
-  border-left: 15px solid #9356DC;
+  width: 50vmin;
+  height: 50vmin;
+  position: relative;
+  border: 15px solid #9356DC;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
   border-radius: 50%;
+  transform: rotate(0deg);
   animation-name: spinner-2;
-  animation-duration: 5s;
+  animation-duration: 3.8s;
+  animation-delay: 1.2s;
+  animation-fill-mode: forwards;
   animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
 }
 .loading-spinner .container-spinner .middle {
-  width: 50vw;
-  height: 50vw;
-  border-left: 15px solid #FF79DA;
+  width: 45vmin;
+  height: 45vmin;
+  border: 15px solid #FF79DA;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
   border-radius: 50%;
+  transform: rotate(0deg);
   animation-name: spinner-3;
-  animation-duration: 5s;
+  animation-duration: 4.5s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
   animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
 }
 .loading-spinner .container-spinner .inner {
-  width: 40vw;
-  height: 40vw;
-  border-left: 15px solid #99E2D0;
+  width: 40vmin;
+  height: 40vmin;
+  border: 15px solid #99E2D0;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
   border-radius: 50%;
+  transform: rotate(0deg);
   animation-name: spinner-4;
+  animation-timing-function: ease-in;
   animation-duration: 5s;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
   animation-iteration-count: infinite;
 }
 
 @keyframes spinner-1 {
   0% {
-    transform: rotate(0%);
+    transform: rotate(0deg);
   }
   100% {
-    transform: rotate(360deg);
+    transform: rotate(1800deg);
   }
 }
 @keyframes spinner-2 {
   0% {
-    transform: rotate(0%);
+    transform: rotate(0deg);
   }
   100% {
-    transform: rotate(630deg);
+    transform: rotate(2500deg);
   }
 }
 @keyframes spinner-3 {
   0% {
-    transform: rotate(0%);
+    transform: rotate(0deg);
   }
   100% {
     transform: rotate(720deg);
@@ -287,18 +363,20 @@ header img {
 }
 @keyframes spinner-4 {
   0% {
-    transform: rotate(0%);
+    transform: rotate(0deg);
   }
   100% {
-    transform: rotate(270deg);
+    transform: rotate(1550deg);
   }
 }
 @keyframes active-loading-spinner {
   0% {
-    display: initial;
+    opacity: 100%;
+    transform: scale(1);
   }
   100% {
-    display: none;
+    opacity: 0%;
+    transform: scale(0);
   }
 }
 .box-localisation {
@@ -335,6 +413,7 @@ nav {
   align-items: center;
 }
 .container-order-process h2 {
+  padding-left: 20px;
   align-self: flex-start;
 }
 
@@ -358,10 +437,10 @@ main .card-container {
   background-color: #F6F6F6;
 }
 main .card-container .restaurant-card:hover > .heading-card__heading {
-  text-decoration: underline;
+  text-decoration: none;
 }
-main section {
-  padding: 0px 20px;
+main .card-container .restaurant-card:hover {
+  box-shadow: #CACACA 0px 0px 30px;
 }
 main section:nth-child(2) {
   padding-top: 50px;
@@ -425,5 +504,83 @@ main section a:link {
   transform: translateY(-50%);
   padding: 0px 3px;
 }
+
+.white-heart {
+  visibility: visible;
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  top: 3px;
+  right: 3px;
+}
+
+.purple-heart {
+  visibility: hidden;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 0px;
+  right: 0px;
+}
+
+.etiquette {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  top: 5px;
+  right: 40px;
+}
+.etiquette input {
+  display: none;
+  width: 0px;
+  height: 0px;
+}
+.etiquette input:checked + .purple-heart {
+  visibility: visible;
+  z-index: 2;
+}
+
+/*
+.heart-color {
+  width: 40px;
+  position: relative;
+  left: -55px;
+  transform: scale(0);
+
+  &:active {
+    animation-name: popwhite;
+    animation-duration: 1ms;
+    animation-delay: 0ms;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+}
+
+.coeur-blanc {
+  width: 40px;
+  position:relative;
+  left:-55px;
+  transform:scale(1);
+  &:active + .heart-color{
+    animation-name: popcolour;
+    animation-duration: 1ms;
+    animation-delay: 0ms;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+}
+
+
+
+@keyframes popwhite {
+  0% {transform:scale(0)}
+  100% {transform: scale(1)}
+}
+
+@keyframes popcolour {
+  0% {transform:scale(0)}
+  100% {transform: scale(1)}
+}
+*/
 
 /*# sourceMappingURL=style.css.map */
