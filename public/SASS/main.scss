@@ -6,51 +6,10 @@
 @import "./3_layout/footer";
 @import "./3_layout/header";
 @import "./3_layout/nav";
+@import "./3_layout/main_menu";
 @import "./4_components/button";
 @import "./4_components/card-restaurant";
 @import "./4_components/loading-spinner";
+@import "./4_components/menu-card";
 @import "./5_pages/home";
-
-.white-heart {
-  cursor:pointer;
-  position:absolute;
-  width:35px;
-  height:35px;
-  top:1px;
-  right:1px;
-}
-
-.purple-heart {
-  cursor:pointer;
-  transform:scale(0);
-  position:absolute;
-  width: 40px;
-  height:40px;
-  top:-2px;
-  right:-2px;
-}
-
-.etiquette {
-  position:relative;
-  width: 40px;
-  height:40px;
-  top:5px;
-  right:40px;
-  input {
-    display: none;
-    width: 0px;
-    height: 0px;
-
-    &:checked + .purple-heart {
-      transform:scale(1);
-      z-index: 2;
-    }
-    &:hover + .purple-heart{
-      transform:scale(1);
-      z-index:2;
-      transition-property: transform;
-      transition-delay:0s;
-      transition-duration: 0.5s;
-      transition-timing-function: cubic-bezier(0,2,1,2);
-    }
-  }}
+@import "./5_pages/aLaFrançaise";

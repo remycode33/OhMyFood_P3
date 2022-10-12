@@ -5,6 +5,11 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Shrikhand&display=swap');
 
+a,a:visited {
+  text-decoration:none;
+  color:black;
+}
+
 h1{
   font-size:25px ;
   font-weight: 500;
@@ -60,3 +65,9 @@ footer {
   }
 }
 
+// RESTAURANT pages
+
+.name-restaurant {
+  font-family: Shrikhand;
+  font-size: 21px;
+}

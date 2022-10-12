@@ -1,0 +1,40 @@
+main.layout-menu {
+  width:100vw;
+  height:fit-content;
+  .layout-menu__box-pic {
+    width:100%;
+    img{
+      position:absolute;
+      top:63px;
+      z-index: -1;
+      width: 100%;
+      height:250px;
+      object-fit: cover;
+    }
+    &--aLaFrancaise{
+      img {
+        object-position: 5% 60%;
+      }
+    }
+  }
+  .layout-menu__container-menu{
+    display: flex;
+    flex-flow: wrap column;
+    align-items:center;
+    justify-content: space-between;
+    margin-top:250px;
+    padding: 0px 16px 83px;
+    border-top-left-radius: 36px;
+    border-top-right-radius: 36px;
+    background-color: $secondary-colour-gradient-location-background;
+    box-shadow:$secondary-colour-gradient-location-background 0px -36px 0px;
+    .container-menu__heading {
+      display:flex;
+      flex-flow:row wrap;
+      justify-content: space-between;
+      .box-heart {
+        margin-right:23px;
+      }
+    }
+  }
+}

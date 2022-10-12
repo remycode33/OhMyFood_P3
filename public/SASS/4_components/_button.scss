@@ -10,9 +10,54 @@
   }
   &:hover {
     cursor:pointer;
-    box-shadow:inset #AAA 0px 0px 10px;
+    box-shadow:inset lighten($primary-colour,50%) 0px 0px 8px;
   }
   &:active {
-    box-shadow: inset darken($primary-colour,5%) 0px 0px 20px;
+    box-shadow: inset darken($primary-colour,3%) 0px 0px 10px;
+  }
+}
+
+
+//========================= heart-slider
+
+.box-heart{
+  position:relative;
+  width: 20px;
+  height: 20px;
+  a.box-clickable {
+    position: absolute;
+    top: 0px;
+    width: 20px;
+    height: 20px;
+    z-index: 1;
+    &:hover + .mask-heart + .dropping-window-heart{
+      height: 0%;
+      transition-property:height;
+      transition-duration: 0.5s;
+      transition-timing-function: ease;
+    }
+  }
+  .mask-heart {
+    width:100%;
+    height:100%;
+    -webkit-mask-image: url(../pictures/images/icons/heart-regular-test.svg);
+    mask-image: url(../pictures/images/icons/heart-regular-test.svg);
+    -webkit-mask-size: 100%;
+    mask-size: 100%;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    background-image:linear-gradient(180deg, $primary-colour, $secondary-colour );
+
+  }
+  .dropping-window-heart {
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0px;
+    left:0px;
+    background-color: $secondary-colour-gradient-location-background;
+    background-image:url("../pictures/images/icons/heart-regular-test-white.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
   }
 }

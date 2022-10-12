@@ -24,17 +24,6 @@ nav {
   margin-right: 15px;
 }
 
-.container-order-process{
-  display:flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  h2 {
-    padding-left:20px;
-    align-self: flex-start;
-  }
-}
 
 .restaurant-search {
   background-color: $soft-grey;
@@ -52,12 +41,11 @@ nav {
 
 //MAIN
 
-//main__process
-
- main {
+ main.main-home {
    padding-top: 50px;
 
    .card-container {
+     padding:0px 20px;
      background-color: $soft-grey;
      .restaurant-card {
        &:hover > .heading-card__heading {
@@ -87,56 +75,97 @@ nav {
    }
  }
 
-.flex-process {
-   display:flex;
-   flex-flow: column wrap;
-   justify-content: space-between;
-   margin: 31px 0px 68px;
-   height: 270px;
-   .box-order-process {
-     position:relative;
-     display:flex;
-     flex-flow:row wrap;
-     justify-content: flex-start;
-     background-color: $soft-grey;
-     width: 322px;
-     height: 76px;
-     border-radius: 25px;
-     @include button-boxShadow;
-     &__rounder {
-       position:absolute;
-       left:0px;
-       top:50%;
-       width: 25px;
-       height: 25px;
-       background-color: $primary-colour;
-       border-radius:50%;
-       color: white;
-       text-align: center;
-       line-height:25px;
-       transform: translateX(-50%) translateY(-50%);
-     }
-     &__text {
-       height:fit-content;
-       align-self: center;
-     }
-   }
-   .box-order-process__icon{
-     width:67px;
-     height:100%;
-     padding:0px 20px;
-     &--phone{
-       stroke:$soft-grey;
-       stroke-width: 19px;
-     }
-     svg{
-       position:relative;
-       top:50%;
-       transform:translateY(-50%);
-       padding: 0px 3px;
-     }
-   }
- }
+.container-order-process {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 
+  h2 {
+    padding-left: 20px;
+    width: 100%;
+  }
 
+  .flex-process {
+    width:100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    margin: 31px 0px 68px;
 
+    .box-order-process {
+      position: relative;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: flex-start;
+      background-color: $soft-grey;
+      width: 322px;
+      height: 76px;
+      border-radius: 25px;
+      margin:12px 19px;
+      @include button-boxShadow;
+
+      &__rounder {
+        position: absolute;
+        left: 0px;
+        top: 50%;
+        width: 25px;
+        height: 25px;
+        background-color: $primary-colour;
+        border-radius: 50%;
+        color: white;
+        text-align: center;
+        line-height: 25px;
+        transform: translateX(-50%) translateY(-50%);
+      }
+
+      &__text {
+        height: fit-content;
+        align-self: center;
+      }
+      &:hover {
+        background-color:#F5EDFF ;
+      }
+      .box-order-process__icon--phone {
+
+        &:hover {
+          content:url("../pictures/images/icons/mobile-button-purple.svg");
+          transform:scale(0.8);
+        }
+      }
+
+      .box-order-process__icon--list {
+        &:hover {
+          content:url("../pictures/images/icons/list-ul-purple.svg");
+          transform:scale(0.8);
+        }
+      }
+
+      .box-order-process__icon--stand {
+        &:hover {
+          content:url("../pictures/images/icons/store-purple.svg");
+          transform:scale(0.8);
+        }
+      }
+    }
+
+    .box-order-process__icon {
+      width: 67px;
+      height: 100%;
+      padding: 0px 20px;
+
+      &--phone {
+        stroke: $soft-grey;
+        stroke-width: 19px;
+      }
+
+      svg {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 0px 3px;
+      }
+    }
+  }
+}

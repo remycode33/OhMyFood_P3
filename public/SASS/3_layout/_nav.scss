@@ -1,0 +1,19 @@
+//NAV pages menus
+
+.nav-menu {
+  display:flex;
+  flex-flow:row wrap;
+  align-content:center;
+  position:absolute;
+  width:fit-content;
+  height:63px;
+  top:0px;
+  left:20px;
+  a {
+    display:inline-block;
+    height:fit-content;
+    img.back-icon{
+      width:15px;
+    }
+  }
+}
