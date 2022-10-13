@@ -28,36 +28,83 @@
       }
     }
     .card-dish{
+      overflow: hidden;
       display:flex;
       flex-flow:row wrap;
       justify-content:space-between;
-      width:100%;
       height:fit-content;
-      padding:10px;
+      //padding:8px 10px;
+     // padding-right:0px;
       background-color:white;
       border-radius:15px;
       margin:15px 0px;
       box-shadow:#CFCFCF 2px 2px 6px;
+      &:hover > div:nth-child(2) {
+        position:relative;
+        transform:translatex(-50px);
+        transition-property: transform;
+        transition-duration: 0.7s;
+        transition-timing-function: cubic-bezier(0,1.04,.95,.96);
+        &>div:nth-child(2) > div.animated-round {
+          transform: rotate(-1080deg);///////
+          transition-property: transform;
+          transition-duration: 1s;
+          transition-timing-function:cubic-bezier(.23,.47,.7,1.4);
+        }
+      }
       &__box-text {
         display:flex;
         flex-flow:column wrap;
         &__name {
-
         }
-
         &__description {
         }
       }
       &__box-price {
         display:flex;
-        flex-flow:wrap row;
-        align-items: flex-end;
-        &__price {
-        }
+        flex-flow: row nowrap;
 
-        &__validate {
+        .box-price__price {
+          position:relative;
+          left: 50px;
+          width:fit-content;
+          height:fit-content;
+          margin-right: 20px;
+          align-self:flex-end;
+        }
+        .box-price__validate {
+          display:flex;
+          flex-flow: row wrap;
+          justify-content: center;
+          align-content:center;
+          position:relative;
+          overflow:hidden;
+          transform:translatex(50px);
+          width:50px;
+          height:54px;
+          border-top-right-radius: 15px;
+          border-bottom-right-radius: 15px;
+          background-color: $background-new;
+          .animated-round{
+            display:flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-content:center;
+            width:25px;
+            height:25px;
+            background-color:white;
+            border-radius:50%;
+            text-align:center;
+            img {
+              width:18px;
+              height:18px;
+            }
+          }
         }
       }
     }
   }
 }
+
+
+
