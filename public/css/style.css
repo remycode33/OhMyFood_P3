@@ -601,6 +601,7 @@ main.layout-menu .layout-menu__container-menu .container-menu__heading .box-hear
   transition-timing-function: cubic-bezier(0.23, 0.47, 0.7, 1.4);
 }
 .layout-menu__container-menu .dish-category .card-dish__box-text {
+  padding: 10px 8px;
   display: flex;
   flex-flow: column wrap;
 }
@@ -613,6 +614,7 @@ main.layout-menu .layout-menu__container-menu .container-menu__heading .box-hear
   left: 50px;
   width: fit-content;
   height: fit-content;
+  padding-bottom: 10px;
   margin-right: 20px;
   align-self: flex-end;
 }
@@ -625,7 +627,7 @@ main.layout-menu .layout-menu__container-menu .container-menu__heading .box-hear
   overflow: hidden;
   transform: translatex(50px);
   width: 50px;
-  height: 54px;
+  height: 100%;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   background-color: #99E2D0;

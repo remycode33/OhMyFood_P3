@@ -33,8 +33,6 @@
       flex-flow:row wrap;
       justify-content:space-between;
       height:fit-content;
-      //padding:8px 10px;
-     // padding-right:0px;
       background-color:white;
       border-radius:15px;
       margin:15px 0px;
@@ -53,6 +51,7 @@
         }
       }
       &__box-text {
+        padding:10px 8px;
         display:flex;
         flex-flow:column wrap;
         &__name {
@@ -69,6 +68,7 @@
           left: 50px;
           width:fit-content;
           height:fit-content;
+          padding-bottom:10px;
           margin-right: 20px;
           align-self:flex-end;
         }
@@ -81,7 +81,7 @@
           overflow:hidden;
           transform:translatex(50px);
           width:50px;
-          height:54px;
+          height:100%;
           border-top-right-radius: 15px;
           border-bottom-right-radius: 15px;
           background-color: $background-new;
