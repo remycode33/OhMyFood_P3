@@ -7,12 +7,12 @@
   filter: drop-shadow(#aaa 2px 0px 2px);
   &--explorer {
     background-image: radial-gradient(farthest-corner at 20% -40%, $secondary-colour 10%, $primary-colour 100%);
-    @include button-boxShadow;
+    box-shadow : #DDD 0px 4px 8px;
   }
   &:hover {
     cursor:pointer;
     box-shadow:inset lighten($primary-colour,20%) 0px 0px 8px;
-    filter: drop-shadow(#aaa 0px 3px 4px);
+    filter: drop-shadow(#aaa 2px 6px 3px);
   }
   &:active {
     box-shadow: inset darken($primary-colour,3%) 0px 0px 10px;

@@ -104,7 +104,7 @@ nav {
       height: 76px;
       border-radius: 25px;
       margin:12px 19px;
-      @include button-boxShadow;
+      box-shadow : #DDD 0px 4px 8px;
 
       &__rounder {
         position: absolute;

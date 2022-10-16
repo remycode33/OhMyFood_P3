@@ -1,8 +1,29 @@
-/*@button ($width:20px,$height:10px,$color:red){
-  width:$witdh;
-  height:$height;
-}*/
 
-@mixin button-boxShadow {
-  box-shadow : #DDD 0px 4px 8px;
+
+$delay:1;
+
+@mixin opacity-effect {
+  @for $i from 2 through 4 {
+    section:nth-child(#{$i}) {
+      @for $a from 2 through 4 {
+        .card-dish:nth-child(#{$a}) {
+          @if ($i == 2 ) {
+            $a: $a
+          }
+          @elseif ($i == 3 ){
+            $a: $a+3
+          }
+        @elseif ($i == 4 ){
+          $a: $a+6
+        }
+          animation-name: opacity-effect;
+          animation-delay: calc((-1 + #{$a} ) * #{$delay}s);
+          animation-duration: 1s;
+          animation-iteration-count: 1;
+          animation-timing-function: ease-in;
+          animation-fill-mode: forwards;
+        }
+      }
+    }
+  }
 }
