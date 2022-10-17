@@ -192,11 +192,10 @@ main.layout-menu .layout-menu__box-pic--aLaFrancaise img {
 }
 main.layout-menu .layout-menu__container-menu {
   display: flex;
-  flex-flow: wrap column;
-  align-items: center;
-  justify-content: space-between;
+  flex-flow: wrap row;
+  justify-content: space-evenly;
   margin-top: 250px;
-  padding: 0px 16px 83px;
+  padding: 0px 0px 83px;
   border-top-left-radius: 36px;
   border-top-right-radius: 36px;
   background-color: #EAEAEA;
@@ -206,6 +205,7 @@ main.layout-menu .layout-menu__container-menu .container-menu__heading {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
+  padding-left: 16px;
 }
 main.layout-menu .layout-menu__container-menu .container-menu__heading .box-heart {
   margin-right: 23px;
@@ -218,10 +218,14 @@ main.layout-menu .layout-menu__container-menu .container-menu__heading .box-hear
   border-radius: 50px;
   color: white;
   filter: drop-shadow(#aaa 2px 0px 2px);
-}
-.button--explorer {
   background-image: radial-gradient(farthest-corner at 20% -40%, #FF79DA 10%, #9356DC 100%);
   box-shadow: #DDD 0px 4px 8px;
+}
+.button--order {
+  margin: 0px 25%;
+}
+.button--explorer {
+  margin: auto;
 }
 .button:hover {
   cursor: pointer;
@@ -277,8 +281,6 @@ main.layout-menu .layout-menu__container-menu .container-menu__heading .box-hear
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
-  max-height: 1228px;
-  padding-bottom: 53px;
 }
 .card-container a:nth-child(2) img {
   object-position: 50% 80%;
@@ -410,7 +412,7 @@ main.layout-menu .layout-menu__container-menu .container-menu__heading .box-hear
   background-size: 350px;
   animation-name: active-loading-spinner;
   animation-duration: 0s;
-  animation-delay: 0.5s;
+  animation-delay: 3s;
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
 }
@@ -432,8 +434,8 @@ main.layout-menu .layout-menu__container-menu .container-menu__heading .box-hear
   top: 20vh;
   transform: rotate(0deg);
   animation-name: spinner-1;
-  animation-duration: 3.5s;
-  animation-delay: 1.5s;
+  animation-duration: 3s;
+  animation-delay: 0.2s;
   animation-fill-mode: forwards;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in;
@@ -456,8 +458,8 @@ main.layout-menu .layout-menu__container-menu .container-menu__heading .box-hear
   border-radius: 50%;
   transform: rotate(0deg);
   animation-name: spinner-2;
-  animation-duration: 3.8s;
-  animation-delay: 1.2s;
+  animation-duration: 1s;
+  animation-delay: 2s;
   animation-fill-mode: forwards;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in;
@@ -472,8 +474,8 @@ main.layout-menu .layout-menu__container-menu .container-menu__heading .box-hear
   border-radius: 50%;
   transform: rotate(0deg);
   animation-name: spinner-3;
-  animation-duration: 4.5s;
-  animation-delay: 0.5s;
+  animation-duration: 2s;
+  animation-delay: 0.2s;
   animation-fill-mode: forwards;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in;
@@ -489,7 +491,7 @@ main.layout-menu .layout-menu__container-menu .container-menu__heading .box-hear
   transform: rotate(0deg);
   animation-name: spinner-4;
   animation-timing-function: ease-in;
-  animation-duration: 5s;
+  animation-duration: 3s;
   animation-delay: 0s;
   animation-fill-mode: forwards;
   animation-iteration-count: infinite;
@@ -538,15 +540,13 @@ main.layout-menu .layout-menu__container-menu .container-menu__heading .box-hear
   }
 }
 .layout-menu__container-menu {
+  min-width: 370px;
   width: 100vw;
   height: fit-content;
-  display: flex;
-  flex-flow: row wrap;
-  align-content: space-between;
 }
 .layout-menu__container-menu section:nth-child(2) .card-dish:nth-child(2) {
   animation-name: opacity-effect;
-  animation-delay: calc((-1 + 2 ) * 1s);
+  animation-delay: calc((-1 + 2 ) * 0.3s);
   animation-duration: 1s;
   animation-iteration-count: 1;
   animation-timing-function: ease-in;
@@ -554,7 +554,7 @@ main.layout-menu .layout-menu__container-menu .container-menu__heading .box-hear
 }
 .layout-menu__container-menu section:nth-child(2) .card-dish:nth-child(3) {
   animation-name: opacity-effect;
-  animation-delay: calc((-1 + 3 ) * 1s);
+  animation-delay: calc((-1 + 3 ) * 0.3s);
   animation-duration: 1s;
   animation-iteration-count: 1;
   animation-timing-function: ease-in;
@@ -562,7 +562,15 @@ main.layout-menu .layout-menu__container-menu .container-menu__heading .box-hear
 }
 .layout-menu__container-menu section:nth-child(2) .card-dish:nth-child(4) {
   animation-name: opacity-effect;
-  animation-delay: calc((-1 + 4 ) * 1s);
+  animation-delay: calc((-1 + 4 ) * 0.3s);
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+.layout-menu__container-menu section:nth-child(2) .card-dish:nth-child(5) {
+  animation-name: opacity-effect;
+  animation-delay: calc((-1 + 5 ) * 0.3s);
   animation-duration: 1s;
   animation-iteration-count: 1;
   animation-timing-function: ease-in;
@@ -570,7 +578,7 @@ main.layout-menu .layout-menu__container-menu .container-menu__heading .box-hear
 }
 .layout-menu__container-menu section:nth-child(3) .card-dish:nth-child(2) {
   animation-name: opacity-effect;
-  animation-delay: calc((-1 + 5 ) * 1s);
+  animation-delay: calc((-1 + 5 ) * 0.3s);
   animation-duration: 1s;
   animation-iteration-count: 1;
   animation-timing-function: ease-in;
@@ -578,7 +586,7 @@ main.layout-menu .layout-menu__container-menu .container-menu__heading .box-hear
 }
 .layout-menu__container-menu section:nth-child(3) .card-dish:nth-child(3) {
   animation-name: opacity-effect;
-  animation-delay: calc((-1 + 6 ) * 1s);
+  animation-delay: calc((-1 + 6 ) * 0.3s);
   animation-duration: 1s;
   animation-iteration-count: 1;
   animation-timing-function: ease-in;
@@ -586,7 +594,15 @@ main.layout-menu .layout-menu__container-menu .container-menu__heading .box-hear
 }
 .layout-menu__container-menu section:nth-child(3) .card-dish:nth-child(4) {
   animation-name: opacity-effect;
-  animation-delay: calc((-1 + 7 ) * 1s);
+  animation-delay: calc((-1 + 7 ) * 0.3s);
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+.layout-menu__container-menu section:nth-child(3) .card-dish:nth-child(5) {
+  animation-name: opacity-effect;
+  animation-delay: calc((-1 + 8 ) * 0.3s);
   animation-duration: 1s;
   animation-iteration-count: 1;
   animation-timing-function: ease-in;
@@ -594,7 +610,7 @@ main.layout-menu .layout-menu__container-menu .container-menu__heading .box-hear
 }
 .layout-menu__container-menu section:nth-child(4) .card-dish:nth-child(2) {
   animation-name: opacity-effect;
-  animation-delay: calc((-1 + 8 ) * 1s);
+  animation-delay: calc((-1 + 8 ) * 0.3s);
   animation-duration: 1s;
   animation-iteration-count: 1;
   animation-timing-function: ease-in;
@@ -602,7 +618,7 @@ main.layout-menu .layout-menu__container-menu .container-menu__heading .box-hear
 }
 .layout-menu__container-menu section:nth-child(4) .card-dish:nth-child(3) {
   animation-name: opacity-effect;
-  animation-delay: calc((-1 + 9 ) * 1s);
+  animation-delay: calc((-1 + 9 ) * 0.3s);
   animation-duration: 1s;
   animation-iteration-count: 1;
   animation-timing-function: ease-in;
@@ -610,7 +626,15 @@ main.layout-menu .layout-menu__container-menu .container-menu__heading .box-hear
 }
 .layout-menu__container-menu section:nth-child(4) .card-dish:nth-child(4) {
   animation-name: opacity-effect;
-  animation-delay: calc((-1 + 10 ) * 1s);
+  animation-delay: calc((-1 + 10 ) * 0.3s);
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+.layout-menu__container-menu section:nth-child(4) .card-dish:nth-child(5) {
+  animation-name: opacity-effect;
+  animation-delay: calc((-1 + 11 ) * 0.3s);
   animation-duration: 1s;
   animation-iteration-count: 1;
   animation-timing-function: ease-in;
@@ -623,9 +647,10 @@ main.layout-menu .layout-menu__container-menu .container-menu__heading .box-hear
   margin-bottom: 20px;
 }
 .layout-menu__container-menu .dish-category {
+  max-width: 377px;
   position: relative;
   width: 100%;
-  margin-bottom: 40px;
+  margin: 0px 16px 40px;
 }
 .layout-menu__container-menu .dish-category .dish-category__heading {
   position: relative;
@@ -642,6 +667,8 @@ main.layout-menu .layout-menu__container-menu .container-menu__heading .box-hear
   border-bottom: 3px solid #99E2D0;
 }
 .layout-menu__container-menu .dish-category .card-dish {
+  cursor: pointer;
+  max-width: 377px;
   overflow: hidden;
   display: flex;
   flex-flow: row wrap;
@@ -652,6 +679,12 @@ main.layout-menu .layout-menu__container-menu .container-menu__heading .box-hear
   margin: 15px 0px;
   box-shadow: #CFCFCF 2px 2px 6px;
   opacity: 0;
+  animation-name: stretch;
+  animation-delay: 1s;
+  animation-duration: 1.5s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
 }
 .layout-menu__container-menu .dish-category .card-dish:hover > div:nth-child(2) {
   position: relative;
@@ -666,13 +699,32 @@ main.layout-menu .layout-menu__container-menu .container-menu__heading .box-hear
   transition-duration: 1s;
   transition-timing-function: cubic-bezier(0.23, 0.47, 0.7, 1.4);
 }
+.layout-menu__container-menu .dish-category .card-dish:not(:hover) > div:nth-child(2) {
+  position: relative;
+  transform: translatex(0px);
+  transition-property: transform;
+  transition-duration: 0.7s;
+  transition-timing-function: ease-in;
+}
+.layout-menu__container-menu .dish-category .card-dish:not(:hover) > div:nth-child(2) > div:nth-child(2) > div.animated-round {
+  transform: rotate(0deg);
+  transition-property: transform;
+  transition-duration: 1s;
+  transition-timing-function: ease-in;
+}
 .layout-menu__container-menu .dish-category .card-dish__box-text {
   padding: 10px 0px 10px 8px;
   display: flex;
   flex-flow: column wrap;
 }
+.layout-menu__container-menu .dish-category .card-dish .box-text__name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 49vw;
+}
 .layout-menu__container-menu .dish-category .card-dish .box-text__description {
-  max-width: 50vw;
+  max-width: 49vw;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -728,6 +780,14 @@ main.layout-menu .layout-menu__container-menu .container-menu__heading .box-hear
     opacity: 1;
   }
 }
+@keyframes stretch {
+  0% {
+    margin: 110%;
+  }
+  100% {
+    height: 100%;
+  }
+}
 .box-localisation {
   height: 65px;
   width: 100vw;
@@ -771,7 +831,7 @@ main.main-home {
   padding-top: 50px;
 }
 main.main-home .card-container {
-  padding: 0px 20px;
+  padding: 0px 20px 83px;
   background-color: #F6F6F6;
 }
 main.main-home .card-container .restaurant-card:hover > .heading-card__heading {
@@ -842,15 +902,15 @@ main.main-home section a:link {
 .container-order-process .flex-process .box-order-process:hover {
   background-color: #F5EDFF;
 }
-.container-order-process .flex-process .box-order-process .box-order-process__icon--phone:hover {
+.container-order-process .flex-process .box-order-process:hover > .box-order-process__icon--phone:nth-child(2) {
   content: url("../pictures/images/icons/mobile-button-purple.svg");
-  transform: scale(0.8);
+  transform: scale(0.77);
 }
-.container-order-process .flex-process .box-order-process .box-order-process__icon--list:hover {
+.container-order-process .flex-process .box-order-process:hover > .box-order-process__icon--list:nth-child(2) {
   content: url("../pictures/images/icons/list-ul-purple.svg");
   transform: scale(0.8);
 }
-.container-order-process .flex-process .box-order-process .box-order-process__icon--stand:hover {
+.container-order-process .flex-process .box-order-process:hover > .box-order-process__icon--stand:nth-child(2) {
   content: url("../pictures/images/icons/store-purple.svg");
   transform: scale(0.8);
 }
@@ -861,7 +921,7 @@ main.main-home section a:link {
 }
 .container-order-process .flex-process .box-order-process__icon--phone {
   stroke: #F6F6F6;
-  stroke-width: 19px;
+  stroke-width: 8px;
 }
 .container-order-process .flex-process .box-order-process__icon svg {
   position: relative;

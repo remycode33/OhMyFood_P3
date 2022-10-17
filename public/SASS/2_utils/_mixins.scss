@@ -1,11 +1,10 @@
 
 
-$delay:1;
 
 @mixin opacity-effect {
   @for $i from 2 through 4 {
     section:nth-child(#{$i}) {
-      @for $a from 2 through 4 {
+      @for $a from 2 through 5 {
         .card-dish:nth-child(#{$a}) {
           @if ($i == 2 ) {
             $a: $a
@@ -17,7 +16,7 @@ $delay:1;
           $a: $a+6
         }
           animation-name: opacity-effect;
-          animation-delay: calc((-1 + #{$a} ) * #{$delay}s);
+          animation-delay: calc((-1 + #{$a} ) * #{$delay-opacity}s);
           animation-duration: 1s;
           animation-iteration-count: 1;
           animation-timing-function: ease-in;

@@ -45,7 +45,7 @@ nav {
    padding-top: 50px;
 
    .card-container {
-     padding:0px 20px;
+     padding:0px 20px 83px;
      background-color: $soft-grey;
      .restaurant-card {
        &:hover > .heading-card__heading {
@@ -126,27 +126,21 @@ nav {
       }
       &:hover {
         background-color:#F5EDFF ;
-      }
-      .box-order-process__icon--phone {
 
-        &:hover {
+      & >.box-order-process__icon--phone:nth-child(2) {
           content:url("../pictures/images/icons/mobile-button-purple.svg");
-          transform:scale(0.8);
+         transform:scale(0.77);
         }
-      }
 
-      .box-order-process__icon--list {
-        &:hover {
+      & >.box-order-process__icon--list:nth-child(2){
           content:url("../pictures/images/icons/list-ul-purple.svg");
           transform:scale(0.8);
         }
-      }
 
-      .box-order-process__icon--stand {
-        &:hover {
+      & >.box-order-process__icon--stand:nth-child(2) {
           content:url("../pictures/images/icons/store-purple.svg");
           transform:scale(0.8);
-        }
+      }
       }
     }
 
@@ -157,7 +151,7 @@ nav {
 
       &--phone {
         stroke: $soft-grey;
-        stroke-width: 19px;
+        stroke-width: 8px;
       }
 
       svg {

@@ -15,7 +15,7 @@
   background-size: 350px;
   animation-name: active-loading-spinner;
   animation-duration: 0s;
-  animation-delay: 0.5s;
+  animation-delay: 3s;
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
 
@@ -38,8 +38,8 @@
     top:20vh;
     transform:rotate(0deg);
     animation-name: spinner-1;
-    animation-duration: 3.5s;
-    animation-delay: 1.5s;
+    animation-duration: 3s;
+    animation-delay: 0.2s;
     animation-fill-mode: forwards;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in;
@@ -62,8 +62,8 @@
       border-radius: 50%;
       transform:rotate(0deg);
       animation-name: spinner-2;
-      animation-duration: 3.8s;
-      animation-delay: 1.2s;
+      animation-duration: 1s;
+      animation-delay: 2s;
       animation-fill-mode: forwards;
       animation-iteration-count: infinite;
       animation-timing-function: ease-in;
@@ -80,8 +80,8 @@
       border-radius: 50%;
       transform:rotate(0deg);
      animation-name: spinner-3;
-      animation-duration: 4.5s;
-      animation-delay: 0.5s;
+      animation-duration:2s;
+      animation-delay: 0.2s;
       animation-fill-mode: forwards;
       animation-iteration-count: infinite;
       animation-timing-function: ease-in;
@@ -99,7 +99,7 @@
       transform:rotate(0deg);
      animation-name: spinner-4;
       animation-timing-function: ease-in;
-      animation-duration: 5s;
+      animation-duration: 3s;
       animation-delay: 0s;
       animation-fill-mode: forwards;
       animation-iteration-count: infinite;

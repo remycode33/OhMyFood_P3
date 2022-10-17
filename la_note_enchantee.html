@@ -7,228 +7,212 @@
     <title>Oh my food!</title>
 </head>
 
-<body>
 
+
+
+<body>
 <header>
     <img src="./public/pictures/images/logo/ohmyfood.png" alt="logo Ohmyfood" />
 </header>
 
-<nav>
-    <div class="box-localisation">
-        <img class="icon-map" src="./public/pictures/images/icons/location-dot.svg" alt="click here to choose your location in Paris"/>
-        <label alt="click here to select your quarter">
-            <select class="city" name="city">
-                <option value="Belleville"> Paris, Belleville</option>
-                <option value="Saint-Germain"> Paris, Saint-Germain</option>
-            </select>
-        </label>
-    </div>
-    <div class="restaurant-search">
-        <h2>
-            Réservez le menu qui vous convient
-        </h2>
-        <div class="description">
-            Découvrez des restaurants d'exception séléctionnés par nos soins
-        </div>
-        <button type="button" class="button button--explorer" alt="click here to search a restaurant" >
-            Explorer nos restaurants
-        </button>
-    </div>
+
+
+<nav class="nav-menu">
+    <a href="index.html">
+        <img class="back-icon" src="./public/pictures/images/icons/arrow-left-solid.svg" alt="click here to return in home page"/>
+    </a>
 </nav>
-<main class="main-home">
-    <section class="container-order-process">
-        <h2>
-            Fonctionnement
-        </h2>
-        <div class="flex-process">
-            <div class="box-order-process">
-                <div class="box-order-process__rounder">
-                    1
-                </div>
-                <div class="box-order-process__icon box-order-process__icon--phone">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="#777" d="M16 64C16 28.7 44.7 0 80 0H304c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H80c-35.3 0-64-28.7-64-64V64zM224 448c0-17.7-14.3-32-32-32s-32 14.3-32 32s14.3 32 32 32s32-14.3 32-32zM304 64H80V384H304V64z"/></svg>
-                </div>
-                <div class="box-order-process__text">
-                    Choisissez un restaurant
-                </div>
-            </div>
 
-            <div class="box-order-process">
-                <div class="box-order-process__rounder">
-                    2
-                </div>
-                <div class="box-order-process__icon box-order-process__icon--list">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#777" d="M64 144c26.5 0 48-21.5 48-48s-21.5-48-48-48S16 69.5 16 96s21.5 48 48 48zM192 64c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H192zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H192zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H192zM64 464c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm48-208c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48z"/></svg>
-                </div>
-                <div class="box-order-process__text">
-                    Composez votre menu
-                </div>
-            </div>
 
-            <div class="box-order-process">
-                <div class="box-order-process__rounder">
-                    3
-                </div>
-                <div class="box-order-process__icon box-order-process__icon--stand">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="#777" d="M547.6 103.8L490.3 13.1C485.2 5 476.1 0 466.4 0H109.6C99.9 0 90.8 5 85.7 13.1L28.3 103.8c-29.6 46.8-3.4 111.9 51.9 119.4c4 .5 8.1 .8 12.1 .8c26.1 0 49.3-11.4 65.2-29c15.9 17.6 39.1 29 65.2 29c26.1 0 49.3-11.4 65.2-29c15.9 17.6 39.1 29 65.2 29c26.2 0 49.3-11.4 65.2-29c16 17.6 39.1 29 65.2 29c4.1 0 8.1-.3 12.1-.8c55.5-7.4 81.8-72.5 52.1-119.4zM499.7 254.9l-.1 0c-5.3 .7-10.7 1.1-16.2 1.1c-12.4 0-24.3-1.9-35.4-5.3V384H128V250.6c-11.2 3.5-23.2 5.4-35.6 5.4c-5.5 0-11-.4-16.3-1.1l-.1 0c-4.1-.6-8.1-1.3-12-2.3V384v64c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V384 252.6c-4 1-8 1.8-12.3 2.3z"/></svg>
-                </div>
-                <div class="box-order-process__text">
-                    Dégustez au restaurant
-                </div>
+
+<main class="layout-menu">
+
+    <div class="layout-menu__box-pic layout-menu__box-pic--aLaFrancaise ">
+        <img src="public/pictures/images/restaurants/laNoteEnchantee.jpg" aria-hidden=”true”/>
+    </div>
+
+    <div class="layout-menu__container-menu">
+        <div class="container-menu__heading">
+            <h1 class="name-restaurant">La note enchantée</h1>
+            <div class="box-heart">
+                <a class="box-clickable"></a>
+                <div class="mask-heart"></div>
+                <div class="dropping-window-heart"></div>
             </div>
         </div>
-    </section>
 
-    <section class="card-container">
+        <section class="dish-category">
+            <div class="dish-category__heading">entrées</div>
 
-        <h1>
-            Restaurants
-        </h1>
-
-        <a href="./la_palette_du_gout.html" target="_blank" rel="noopener" alt="click here to open see the menu of the restaurant La palette du goût" >
-            <div class="restaurant-card">  <!--restaurant 1 -->
-                <div class="restaurant-card__photo new">
-                    <img src="./public/pictures/images/restaurants/laPaletteDuGout.jpg" alt="Velouté de cèpes">
+            <div class="card-dish">
+                <div class="card-dish__box-text">
+                    <div class="box-text__name">Ravioles de foie gras</div>
+                    <div class="box-text__description">Accompagnés de leur crème à la truffe</div>
                 </div>
-                <div class="heading-card__heading">
-                    <h3 class="restaurant-card__title">
-                        La palette du goût
-                    </h3>
-                    <h4 class="restaurant-card__place">
-                        Ménilmontant
-                    </h4>
-
-                    <label class="etiquette" alt="click here to add to your favorite restaurant" >
-                        <input type="checkbox">
-                        <div class="purple-heart">
-                            <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                <defs>
-                                    <linearGradient id="grad1" x1="0%" y1="0%" x2="0%" y2="100%">
-                                        <stop offset="0%" style="stop-color:#9356DC;stop-opacity:1" />
-                                        <stop offset="100%" style="stop-color:#FF79DA;stop-opacity:1" />
-                                    </linearGradient>
-                                </defs>
-                                <path fill="url(#grad1)" d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/>
-                            </svg>
+                <div class="card-dish__box-price">
+                    <div class="box-price__price">25€</div>
+                    <div class="box-price__validate">
+                        <div class="animated-round">
+                            <img src="./public/pictures/images/icons/check-solid.svg" alt="click here to select the dish"/>
                         </div>
-                        <div class="white-heart">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M244 84L255.1 96L267.1 84.02C300.6 51.37 347 36.51 392.6 44.1C461.5 55.58 512 115.2 512 185.1V190.9C512 232.4 494.8 272.1 464.4 300.4L283.7 469.1C276.2 476.1 266.3 480 256 480C245.7 480 235.8 476.1 228.3 469.1L47.59 300.4C17.23 272.1 0 232.4 0 190.9V185.1C0 115.2 50.52 55.58 119.4 44.1C164.1 36.51 211.4 51.37 244 84C243.1 84 244 84.01 244 84L244 84zM255.1 163.9L210.1 117.1C188.4 96.28 157.6 86.4 127.3 91.44C81.55 99.07 48 138.7 48 185.1V190.9C48 219.1 59.71 246.1 80.34 265.3L256 429.3L431.7 265.3C452.3 246.1 464 219.1 464 190.9V185.1C464 138.7 430.4 99.07 384.7 91.44C354.4 86.4 323.6 96.28 301.9 117.1L255.1 163.9z"/></svg>
-                        </div>
-                    </label>
-
+                    </div>
                 </div>
             </div>
-        </a>
 
-        <a href="./la_note_enchantee.html" target="_blank" rel="noopener" alt="click here to open see the menu of the restaurant La note enchantée">
-            <div class="restaurant-card"><!--restaurant 2 -->
-                <div class="restaurant-card__photo new">
-                    <img src="/public/pictures/images/restaurants/laNoteEnchantee.jpg" alt="Tartare de thon">
+            <div class="card-dish">
+                <div class="card-dish__box-text">
+                    <div class="box-text__name">Caviar osciètre</div>
+                    <div class="box-text__description">Sur blini à la farine de blé noir</div>
                 </div>
-                <div class="heading-card__heading">
-                    <h3 class="restaurant-card__title">
-                        La note enchantée
-                    </h3>
-
-                    <h4 class="restaurant-card__place">
-                        Charonne
-                    </h4>
-
-                    <label class="etiquette" alt="click here to add to your favorite restaurant" >
-                        <input type="checkbox">
-                        <div class="purple-heart">
-                            <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                <defs>
-                                    <linearGradient id="grad1" x1="0%" y1="0%" x2="0%" y2="100%">
-                                        <stop offset="0%" style="stop-color:#9356DC;stop-opacity:1" />
-                                        <stop offset="100%" style="stop-color:#FF79DA;stop-opacity:1" />
-                                    </linearGradient>
-                                </defs>
-                                <path fill="url(#grad1)" d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/>
-                            </svg>
+                <div class="card-dish__box-price">
+                    <div class="box-price__price">35€</div>
+                    <div class="box-price__validate">
+                        <div class="animated-round">
+                            <img src="./public/pictures/images/icons/check-solid.svg" alt="click here to select the dish"/>
                         </div>
-                        <div class="white-heart">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M244 84L255.1 96L267.1 84.02C300.6 51.37 347 36.51 392.6 44.1C461.5 55.58 512 115.2 512 185.1V190.9C512 232.4 494.8 272.1 464.4 300.4L283.7 469.1C276.2 476.1 266.3 480 256 480C245.7 480 235.8 476.1 228.3 469.1L47.59 300.4C17.23 272.1 0 232.4 0 190.9V185.1C0 115.2 50.52 55.58 119.4 44.1C164.1 36.51 211.4 51.37 244 84C243.1 84 244 84.01 244 84L244 84zM255.1 163.9L210.1 117.1C188.4 96.28 157.6 86.4 127.3 91.44C81.55 99.07 48 138.7 48 185.1V190.9C48 219.1 59.71 246.1 80.34 265.3L256 429.3L431.7 265.3C452.3 246.1 464 219.1 464 190.9V185.1C464 138.7 430.4 99.07 384.7 91.44C354.4 86.4 323.6 96.28 301.9 117.1L255.1 163.9z"/></svg>
-                        </div>
-                    </label>
-
-
+                    </div>
                 </div>
             </div>
-        </a>
 
-        <a href="./a_la_francaise.html" target="_blank" rel="noopener" alt="click here to open see the menu of the restaurant A la française">
-            <div class="restaurant-card"> <!--restaurant 3 -->
-                <div class="restaurant-card__photo">
-                    <img src="/public/pictures/images/restaurants/aLaFrancaise.jpg" alt="Bouchée de homard croustillant">
+            <div class="card-dish">
+                <div class="card-dish__box-text">
+                    <div class="box-text__name">Homard et espuma de...</div>
+                    <div class="box-text__description">Mariné aux zests d'orange</div>
                 </div>
-                <div class="heading-card__heading">
-                    <h3 class="restaurant-card__title">
-                        À la française
-                    </h3>
-                    <h4 class="restaurant-card__place">
-                        Cité Rouge
-                    </h4>
-
-                    <label class="etiquette" alt="click here to add to your favorite restaurant" >
-                        <input type="checkbox">
-                        <div class="purple-heart">
-                            <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                <defs>
-                                    <linearGradient id="grad1" x1="0%" y1="0%" x2="0%" y2="100%">
-                                        <stop offset="0%" style="stop-color:#9356DC;stop-opacity:1" />
-                                        <stop offset="100%" style="stop-color:#FF79DA;stop-opacity:1" />
-                                    </linearGradient>
-                                </defs>
-                                <path fill="url(#grad1)" d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/>
-                            </svg>
+                <div class="card-dish__box-price">
+                    <div class="box-price__price">20€</div>
+                    <div class="box-price__validate">
+                        <div class="animated-round">
+                            <img src="./public/pictures/images/icons/check-solid.svg" alt="click here to select the dish"/>
                         </div>
-                        <div class="white-heart">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M244 84L255.1 96L267.1 84.02C300.6 51.37 347 36.51 392.6 44.1C461.5 55.58 512 115.2 512 185.1V190.9C512 232.4 494.8 272.1 464.4 300.4L283.7 469.1C276.2 476.1 266.3 480 256 480C245.7 480 235.8 476.1 228.3 469.1L47.59 300.4C17.23 272.1 0 232.4 0 190.9V185.1C0 115.2 50.52 55.58 119.4 44.1C164.1 36.51 211.4 51.37 244 84C243.1 84 244 84.01 244 84L244 84zM255.1 163.9L210.1 117.1C188.4 96.28 157.6 86.4 127.3 91.44C81.55 99.07 48 138.7 48 185.1V190.9C48 219.1 59.71 246.1 80.34 265.3L256 429.3L431.7 265.3C452.3 246.1 464 219.1 464 190.9V185.1C464 138.7 430.4 99.07 384.7 91.44C354.4 86.4 323.6 96.28 301.9 117.1L255.1 163.9z"/></svg>
-                        </div>
-                    </label>
-
+                    </div>
                 </div>
             </div>
-        </a>
 
-        <a href="./le_delice_des_sens.html" target="_blank" rel="noopener" alt="click here to open see the menu of the restaurant Le delice des sens">
-            <div class="restaurant-card"> <!--restaurant 4 -->
-                <div class="restaurant-card__photo">
-                    <img src="/public/pictures/images/restaurants/leDeliceDesSens.jpg" alt="Poulet rôti aux herbes de
-provence">
+            <div class="card-dish">
+                <div class="card-dish__box-text">
+                    <div class="box-text__name">Foie gras de canard cuit entier</div>
+                    <div class="box-text__description">Confiture de figue et pain toasté</div>
                 </div>
-                <div class="heading-card__heading">
-                    <h3 class="restaurant-card__title">
-                        Le délice des sens
-                    </h3>
-                    <h4 class="restaurant-card__place">
-                        Folie-Méricourt
-                    </h4>
-
-                    <label class="etiquette" alt="click here to add to your favorite restaurant">
-                        <input type="checkbox">
-                        <div class="purple-heart">
-                            <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                <defs>
-                                    <linearGradient id="grad1" x1="0%" y1="0%" x2="0%" y2="100%">
-                                        <stop offset="0%" style="stop-color:#9356DC;stop-opacity:1" />
-                                        <stop offset="100%" style="stop-color:#FF79DA;stop-opacity:1" />
-                                    </linearGradient>
-                                </defs>
-                                <path fill="url(#grad1)" d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/>
-                            </svg>
+                <div class="card-dish__box-price">
+                    <div class="box-price__price">35€</div>
+                    <div class="box-price__validate">
+                        <div class="animated-round">
+                            <img src="./public/pictures/images/icons/check-solid.svg" alt="click here to select the dish"/>
                         </div>
-                        <div class="white-heart">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M244 84L255.1 96L267.1 84.02C300.6 51.37 347 36.51 392.6 44.1C461.5 55.58 512 115.2 512 185.1V190.9C512 232.4 494.8 272.1 464.4 300.4L283.7 469.1C276.2 476.1 266.3 480 256 480C245.7 480 235.8 476.1 228.3 469.1L47.59 300.4C17.23 272.1 0 232.4 0 190.9V185.1C0 115.2 50.52 55.58 119.4 44.1C164.1 36.51 211.4 51.37 244 84C243.1 84 244 84.01 244 84L244 84zM255.1 163.9L210.1 117.1C188.4 96.28 157.6 86.4 127.3 91.44C81.55 99.07 48 138.7 48 185.1V190.9C48 219.1 59.71 246.1 80.34 265.3L256 429.3L431.7 265.3C452.3 246.1 464 219.1 464 190.9V185.1C464 138.7 430.4 99.07 384.7 91.44C354.4 86.4 323.6 96.28 301.9 117.1L255.1 163.9z"/></svg>
-                        </div>
-                    </label>
-
+                    </div>
                 </div>
             </div>
-        </a>
-    </section>
+
+
+        </section>
+
+        <section class="dish-category">
+            <div class="dish-category__heading">plats</div>
+
+            <div class="card-dish">
+                <div class="card-dish__box-text">
+                    <div class="box-text__name">Noix de coquilles Saint-Jacques</div>
+                    <div class="box-text__description">Sur lit de purée de céleri-rave</div>
+                </div>
+                <div class="card-dish__box-price">
+                    <div class="box-price__price">40€</div>
+                    <div class="box-price__validate">
+                        <div class="animated-round">
+                            <img src="./public/pictures/images/icons/check-solid.svg" alt="click here to select the dish"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-dish">
+                <div class="card-dish__box-text">
+                    <div class="box-text__name">Langoustine poêlée</div>
+                    <div class="box-text__description">Purée de patate douce</div>
+                </div>
+                <div class="card-dish__box-price">
+                    <div class="box-price__price">35€</div>
+                    <div class="box-price__validate">
+                        <div class="animated-round">
+                            <img src="./public/pictures/images/icons/check-solid.svg" alt="click here to select the dish"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-dish">
+                <div class="card-dish__box-text">
+                    <div class="box-text__name">Mijoté de queue de boeuf</div>
+                    <div class="box-text__description">Et riz sauvage aux zests de citron</div>
+                </div>
+                <div class="card-dish__box-price">
+                    <div class="box-price__price">44€</div>
+                    <div class="box-price__validate">
+                        <div class="animated-round">
+                            <img src="./public/pictures/images/icons/check-solid.svg" alt="click here to select the dish"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+
+        <section class="dish-category">
+            <div class="dish-category__heading">desserts</div>
+
+            <div class="card-dish">
+                <div class="card-dish__box-text">
+                    <div class="box-text__name">Macaron noisette et chocolat</div>
+                    <div class="box-text__description">Glace au caramel brun et sel de Guérande</div>
+                </div>
+                <div class="card-dish__box-price">
+                    <div class="box-price__price">18€</div>
+                    <div class="box-price__validate">
+                        <div class="animated-round">
+                            <img src="./public/pictures/images/icons/check-solid.svg" alt="click here to select the dish"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-dish">
+                <div class="card-dish__box-text">
+                    <div class="box-text__name">Baba au rhum revisité</div>
+                    <div class="box-text__description">Avec son coulis de citron</div>
+                </div>
+                <div class="card-dish__box-price">
+                    <div class="box-price__price">22€</div>
+                    <div class="box-price__validate">
+                        <div class="animated-round">
+                            <img src="./public/pictures/images/icons/check-solid.svg" alt="click here to select the dish"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-dish">
+                <div class="card-dish__box-text">
+                    <div class="box-text__name">Tarte au citron meringuée</div>
+                    <div class="box-text__description">Destructurée</div>
+                </div>
+                <div class="card-dish__box-price">
+                    <div class="box-price__price">23€</div>
+                    <div class="box-price__validate">
+                        <div class="animated-round">
+                            <img src="./public/pictures/images/icons/check-solid.svg" alt="click here to select the dish"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <button type="button" class="button button--order">Commander</button>
+    </div>
 </main>
+
+
+
 <footer>
     <div>
         <svg width="196" height="34" viewBox="0 0 196 34" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -274,18 +258,6 @@ provence">
     </ul>
 </footer>
 
-<div class="loading-spinner">
-    <div class="container-spinner">
-        <div class="spinner outside">
-            <div class="spinner middle">
-                <div class="spinner inner">
-                    <div class="kernel">
-                        <svg></svg>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 </body>
+
 </html>

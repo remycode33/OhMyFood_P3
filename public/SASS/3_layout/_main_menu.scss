@@ -19,11 +19,10 @@ main.layout-menu {
   }
   .layout-menu__container-menu{
     display: flex;
-    flex-flow: wrap column;
-    align-items:center;
-    justify-content: space-between;
+    flex-flow: wrap row;
+    justify-content:space-evenly;
     margin-top:250px;
-    padding: 0px 16px 83px;
+    padding: 0px 0px 83px;
     border-top-left-radius: 36px;
     border-top-right-radius: 36px;
     background-color: $secondary-colour-gradient-location-background;
@@ -32,6 +31,7 @@ main.layout-menu {
       display:flex;
       flex-flow:row wrap;
       justify-content: space-between;
+      padding-left:16px;
       .box-heart {
         margin-right:23px;
       }
