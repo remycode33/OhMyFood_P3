@@ -60,7 +60,7 @@ footer a:visited, footer span:visited {
 }
 
 .name-restaurant {
-  font-family: Shrikhand;
+  font-family: "Shrikhand", cursive;
   font-size: 21px;
 }
 
@@ -217,7 +217,7 @@ main.layout-menu .layout-menu__container-menu .container-menu__heading .box-hear
   border: none;
   border-radius: 50px;
   color: white;
-  filter: drop-shadow(#aaa 2px 0px 2px);
+  filter: drop-shadow(2px 0px 2px #aaa);
   background-image: radial-gradient(farthest-corner at 20% -40%, #FF79DA 10%, #9356DC 100%);
   box-shadow: #DDD 0px 4px 8px;
 }
@@ -230,7 +230,7 @@ main.layout-menu .layout-menu__container-menu .container-menu__heading .box-hear
 .button:hover {
   cursor: pointer;
   box-shadow: inset #c9abee 0px 0px 8px;
-  filter: drop-shadow(#aaa 2px 6px 3px);
+  filter: drop-shadow(2px 6px 3px #AAA);
 }
 .button:active {
   box-shadow: inset #8b49d9 0px 0px 10px;
@@ -257,8 +257,8 @@ main.layout-menu .layout-menu__container-menu .container-menu__heading .box-hear
 .box-heart .mask-heart {
   width: 100%;
   height: 100%;
-  -webkit-mask-image: url(../pictures/images/icons/heart-regular-test.svg);
-  mask-image: url(../pictures/images/icons/heart-regular-test.svg);
+  -webkit-mask-image: url(/public/pictures/images/icons/heart-regular-test.svg);
+  mask-image: url(/public/pictures/images/icons/heart-regular-test.svg);
   -webkit-mask-size: 100%;
   mask-size: 100%;
   -webkit-mask-repeat: no-repeat;
@@ -272,16 +272,11 @@ main.layout-menu .layout-menu__container-menu .container-menu__heading .box-hear
   top: 0px;
   left: 0px;
   background-color: #EAEAEA;
-  background-image: url("../pictures/images/icons/heart-regular-test-white.svg");
+  background-image: url("/public/pictures/images/icons/heart-regular-test-white.svg");
   background-size: 100%;
   background-repeat: no-repeat;
 }
 
-.card-container {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-evenly;
-}
 .card-container a:nth-child(2) img {
   object-position: 50% 80%;
 }
@@ -294,11 +289,8 @@ main.layout-menu .layout-menu__container-menu .container-menu__heading .box-hear
 .card-container a:nth-child(5) img {
   object-position: bottom;
 }
-.card-container h1 {
-  width: 100%;
-  padding-bottom: 27px;
-}
 .card-container .restaurant-card {
+  position: relative;
   width: 337px;
   height: 253px;
   margin: 9px 20px;
@@ -309,8 +301,13 @@ main.layout-menu .layout-menu__container-menu .container-menu__heading .box-hear
 .card-container .restaurant-card:hover {
   box-shadow: #AAA 2px 2px 20px;
 }
+.card-container .restaurant-card a {
+  display: flex;
+  flex-flow: wrap row;
+}
 .card-container .restaurant-card .restaurant-card__photo {
   position: relative;
+  width: 100%;
 }
 .card-container .restaurant-card .restaurant-card__photo img {
   width: 100%;
@@ -321,7 +318,7 @@ main.layout-menu .layout-menu__container-menu .container-menu__heading .box-hear
 .card-container .restaurant-card .heading-card__heading {
   position: relative;
   display: flex;
-  width: 100%;
+  width: 70%;
   height: 80px;
   padding: 18px 10px;
   flex-flow: column wrap;
@@ -351,7 +348,14 @@ main.layout-menu .layout-menu__container-menu .container-menu__heading .box-hear
   font-size: 15px;
 }
 
-.white-heart {
+.etiquette {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  right: 15px;
+  bottom: 15px;
+}
+.etiquette .white-heart {
   cursor: pointer;
   position: absolute;
   width: 35px;
@@ -359,8 +363,7 @@ main.layout-menu .layout-menu__container-menu .container-menu__heading .box-hear
   top: 1px;
   right: 1px;
 }
-
-.purple-heart {
+.etiquette .purple-heart {
   cursor: pointer;
   transform: scale(0);
   position: absolute;
@@ -369,30 +372,25 @@ main.layout-menu .layout-menu__container-menu .container-menu__heading .box-hear
   top: 1px;
   right: 1px;
 }
-
-.etiquette {
-  position: relative;
-  width: 40px;
-  height: 40px;
-  top: 5px;
-  right: 40px;
-}
-.etiquette input {
-  display: none;
-  width: 0px;
-  height: 0px;
-}
-.etiquette input:checked + .purple-heart {
-  transform: scale(1.01);
-  z-index: 2;
-}
-.etiquette input:hover + .purple-heart {
+.etiquette:hover > input + .purple-heart {
   transform: scale(1.01);
   z-index: 2;
   transition-property: transform;
   transition-delay: 0s;
   transition-duration: 0.5s;
   transition-timing-function: cubic-bezier(0, 2, 1, 2);
+}
+.etiquette input {
+  width: 38px;
+  height: 38px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 99999;
+  opacity: 0;
+}
+.etiquette input:checked + .purple-heart {
+  transform: scale(1.01);
+  z-index: 2;
 }
 
 .loading-spinner {
@@ -405,14 +403,14 @@ main.layout-menu .layout-menu__container-menu .container-menu__heading .box-hear
   overflow: hidden;
   position: absolute;
   inset: 0px 0px;
-  background-image: url("../pictures/images/logo/ohmyfood.png");
+  background-image: url("/public/pictures/images/logo/ohmyfood.png");
   background-repeat: no-repeat;
   background-color: white;
   background-position: 50% 75vh;
   background-size: 350px;
   animation-name: active-loading-spinner;
   animation-duration: 0s;
-  animation-delay: 3s;
+  animation-delay: 0s;
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
 }
@@ -716,18 +714,19 @@ main.layout-menu .layout-menu__container-menu .container-menu__heading .box-hear
   padding: 10px 0px 10px 8px;
   display: flex;
   flex-flow: column wrap;
+  max-width: 70%;
 }
 .layout-menu__container-menu .dish-category .card-dish .box-text__name {
+  max-width: 100%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 49vw;
 }
 .layout-menu__container-menu .dish-category .card-dish .box-text__description {
-  max-width: 49vw;
-  white-space: nowrap;
+  max-width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .layout-menu__container-menu .dish-category .card-dish__box-price {
   display: flex;
@@ -789,6 +788,7 @@ main.layout-menu .layout-menu__container-menu .container-menu__heading .box-hear
   }
 }
 .box-localisation {
+  display: block;
   height: 65px;
   width: 100vw;
   background: linear-gradient(360deg, #EAEAEA 90%, #CACACA);
@@ -833,6 +833,13 @@ main.main-home {
 main.main-home .card-container {
   padding: 0px 20px 83px;
   background-color: #F6F6F6;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+main.main-home .card-container h1 {
+  width: 100%;
+  padding-bottom: 27px;
 }
 main.main-home .card-container .restaurant-card:hover > .heading-card__heading {
   text-decoration: none;
@@ -903,15 +910,15 @@ main.main-home section a:link {
   background-color: #F5EDFF;
 }
 .container-order-process .flex-process .box-order-process:hover > .box-order-process__icon--phone:nth-child(2) {
-  content: url("../pictures/images/icons/mobile-button-purple.svg");
+  content: url("/public/pictures/images/icons/mobile-button-purple.svg");
   transform: scale(0.77);
 }
 .container-order-process .flex-process .box-order-process:hover > .box-order-process__icon--list:nth-child(2) {
-  content: url("../pictures/images/icons/list-ul-purple.svg");
+  content: url("/public/pictures/images/icons/list-ul-purple.svg");
   transform: scale(0.8);
 }
 .container-order-process .flex-process .box-order-process:hover > .box-order-process__icon--stand:nth-child(2) {
-  content: url("../pictures/images/icons/store-purple.svg");
+  content: url("/public/pictures/images/icons/store-purple.svg");
   transform: scale(0.8);
 }
 .container-order-process .flex-process .box-order-process__icon {

@@ -9,10 +9,10 @@
           @if ($i == 2 ) {
             $a: $a
           }
-          @elseif ($i == 3 ){
+          @else if ($i == 3 ){
             $a: $a+3
           }
-        @elseif ($i == 4 ){
+        @else if ($i == 4 ){
           $a: $a+6
         }
           animation-name: opacity-effect;

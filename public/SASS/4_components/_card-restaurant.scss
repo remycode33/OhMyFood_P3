@@ -1,10 +1,8 @@
 .card-container {
-  display:flex;
-  flex-flow: row wrap;
-  justify-content: space-evenly;
+
   a:nth-child(2) img {
-    object-position: 50% 80%;
-  }
+   object-position: 50% 80%;
+ }
 
   a:nth-child(3) img {
     object-position: 50% 60%;
@@ -17,11 +15,8 @@
   a:nth-child(5) img {
     object-position: bottom;
   }
-  h1 {
-    width:100%;
-    padding-bottom:27px;
-  }
   .restaurant-card {
+    position:relative;
     width: 337px;
     height: 253px;
     margin:9px 20px;
@@ -31,9 +26,14 @@
     &:hover{
       box-shadow:#AAA 2px 2px 20px;
     }
+    a {
+      display:flex;
+      flex-flow:wrap row;
+    }
 
     .restaurant-card__photo {
       position: relative;
+      width:100%;
 
       img {
         width: 100%;
@@ -45,7 +45,7 @@
     .heading-card__heading{
       position:relative;
       display:flex;
-      width:100%;
+      width:70%;
       height:80px;
       padding:18px 10px;
       flex-flow:column wrap;
@@ -80,50 +80,57 @@
 }
 
 
-.white-heart {
-  cursor:pointer;
-  position:absolute;
-  width:35px;
-  height:35px;
-  top:1px;
-  right:1px;
-}
-
-.purple-heart {
-  cursor:pointer;
-  transform:scale(0);
-  position:absolute;
-  width: 35px;
-  height:35px;
-  top:1px;
-  right:1px;
-}
-
 // ANIME AND TOGGLE HEART
 .etiquette {
-  position: relative;
+  position: absolute;
   width: 40px;
   height: 40px;
-  top: 5px;
-  right: 40px;
+  right: 15px;
+  bottom: 15px;
+
+  .white-heart {
+    cursor:pointer;
+    position:absolute;
+    width:35px;
+    height:35px;
+    top:1px;
+    right:1px;
+  }
+
+  .purple-heart {
+    cursor:pointer;
+    transform:scale(0);
+    position:absolute;
+    width: 35px;
+    height:35px;
+    top:1px;
+    right:1px;
+  }
+
+  &:hover > input + .purple-heart {
+    transform: scale(1.01);
+    z-index: 2;
+    transition-property: transform;
+    transition-delay: 0s;
+    transition-duration: 0.5s;
+    transition-timing-function: cubic-bezier(0, 2, 1, 2);
+  }
 
   input {
-    display: none;
-    width: 0px;
-    height: 0px;
+    width: 38px;
+    height: 38px;
+    //position:relative;
+    right:0px;
+    bottom:0px;
+    z-index:99999;
+    opacity:0;
+
 
     &:checked + .purple-heart {
       transform: scale(1.01);
       z-index: 2;
     }
 
-    &:hover + .purple-heart {
-      transform: scale(1.01);
-      z-index: 2;
-      transition-property: transform;
-      transition-delay: 0s;
-      transition-duration: 0.5s;
-      transition-timing-function: cubic-bezier(0, 2, 1, 2);
-    }
+
   }
 }

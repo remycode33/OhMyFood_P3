@@ -79,19 +79,19 @@
         padding:10px 0px 10px 8px;
         display:flex;
         flex-flow:column wrap;
-
+        max-width:70%;
       }
         .box-text__name {
+          max-width:100%;
           white-space:nowrap;
           overflow:hidden;
           text-overflow:ellipsis ;
-          max-width:49vw;
         }
-        .box-text__description {
-          max-width:49vw;
-          white-space:nowrap;
+      .box-text__description {
+          max-width:100%;
           overflow:hidden;
           text-overflow:ellipsis ;
+          white-space:nowrap;
       }
       &__box-price {
         display:flex;

@@ -4,7 +4,8 @@
   "description": "P3 formation OpenClassRooms",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./main.scss:../css/style.css"
+    "sass": "sass --watch ./main.scss:../css/style.css",
+    "prefix": "postcss ../css/style.css --use autoprefixer -d ../css/prefixed/"
   },
   "repository": {
     "type": "git",
@@ -21,5 +22,6 @@
   "bugs": {
     "url": "https://github.com/remycode33/OhMyFood_P3_OCR/issues"
   },
-  "homepage": "https://github.com/remycode33/OhMyFood_P3_OCR#readme"
+  "homepage": "https://github.com/remycode33/OhMyFood_P3_OCR#readme",
+  "browserslist":"last 4 versions"
 }

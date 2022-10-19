@@ -8,14 +8,14 @@
   overflow:hidden;
   position: absolute;
   inset: 0px 0px;
-  background-image: url("../pictures/images/logo/ohmyfood.png");
+  background-image: url("/public/pictures/images/logo/ohmyfood.png");
   background-repeat: no-repeat;
   background-color: white;
   background-position: 50% 75vh;
   background-size: 350px;
   animation-name: active-loading-spinner;
   animation-duration: 0s;
-  animation-delay: 3s;
+  animation-delay: 0s;///
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
 

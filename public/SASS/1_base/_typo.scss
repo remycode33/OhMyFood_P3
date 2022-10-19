@@ -1,9 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Shrikhand&display=swap');
+
 * {
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Shrikhand&display=swap');
 
 a,a:visited {
   text-decoration:none;
@@ -68,7 +69,7 @@ footer {
 // RESTAURANT pages
 
 .name-restaurant {
-  font-family: Shrikhand;
+  font-family: 'Shrikhand', cursive;
   font-size: 21px;
 }
 .card-dish{
