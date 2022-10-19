@@ -74,6 +74,12 @@ footer a:visited, footer span:visited {
   color: #7E7E7E;
 }
 
+h2.dish-category__heading {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
