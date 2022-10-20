@@ -122,12 +122,16 @@
     //position:relative;
     right:0px;
     bottom:0px;
-    z-index:99999;
+    z-index:2;
     opacity:0;
 
 
     &:checked + .purple-heart {
       transform: scale(1.01);
+      transition-property: transform;
+      transition-delay: 0s;
+      transition-duration: 0.5s;
+      transition-timing-function: cubic-bezier(0, 2, 1, 2);
       z-index: 2;
     }
 

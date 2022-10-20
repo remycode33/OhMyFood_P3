@@ -137,25 +137,25 @@ nav {
 
       & >.box-order-process__icon--phone:nth-child(2) {
           content:url("/public/pictures/images/icons/mobile-button-purple.svg");
-         transform:scale(0.77);
+         //transform:scale(1);
         }
 
       & >.box-order-process__icon--list:nth-child(2){
           content:url("/public/pictures/images/icons/list-ul-purple.svg");
-          transform:scale(0.8);
+          //transform:scale(0.8);
         }
 
       & >.box-order-process__icon--stand:nth-child(2) {
           content:url("/public/pictures/images/icons/store-purple.svg");
-          transform:scale(0.8);
+         // transform:scale(0.8);
       }
       }
     }
 
     .box-order-process__icon {
-      width: 67px;
+      width: 74px;
       height: 100%;
-      padding: 0px 20px;
+      padding:0 20px 0 34px;
 
       &--phone {
         stroke: $soft-grey;
@@ -166,7 +166,9 @@ nav {
         position: relative;
         top: 50%;
         transform: translateY(-50%);
-        padding: 0px 3px;
+       // padding: 0px 3px;
+        width:100%;
+        height:100%;
       }
     }
   }
