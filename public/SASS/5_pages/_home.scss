@@ -136,17 +136,17 @@ nav {
         background-color:#F5EDFF ;
 
       & >.box-order-process__icon--phone:nth-child(2) {
-          content:url("/public/pictures/images/icons/mobile-button-purple.svg");
+          content:url("../pictures/images/icons/mobile-button-purple.svg");
          //transform:scale(1);
         }
 
       & >.box-order-process__icon--list:nth-child(2){
-          content:url("/public/pictures/images/icons/list-ul-purple.svg");
+          content:url("../pictures/images/icons/list-ul-purple.svg");
           //transform:scale(0.8);
         }
 
       & >.box-order-process__icon--stand:nth-child(2) {
-          content:url("/public/pictures/images/icons/store-purple.svg");
+          content:url("../pictures/images/icons/store-purple.svg");
          //transform:scale(0.8);
       }
       }

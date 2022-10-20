@@ -923,13 +923,13 @@ main.main-home section a:link {
   background-color: #F5EDFF;
 }
 .container-order-process .flex-process .box-order-process:hover > .box-order-process__icon--phone:nth-child(2) {
-  content: url("/public/pictures/images/icons/mobile-button-purple.svg");
+  content: url("../pictures/images/icons/mobile-button-purple.svg");
 }
 .container-order-process .flex-process .box-order-process:hover > .box-order-process__icon--list:nth-child(2) {
-  content: url("/public/pictures/images/icons/list-ul-purple.svg");
+  content: url("../pictures/images/icons/list-ul-purple.svg");
 }
 .container-order-process .flex-process .box-order-process:hover > .box-order-process__icon--stand:nth-child(2) {
-  content: url("/public/pictures/images/icons/store-purple.svg");
+  content: url("../pictures/images/icons/store-purple.svg");
 }
 .container-order-process .flex-process .box-order-process__icon {
   width: 74px;
