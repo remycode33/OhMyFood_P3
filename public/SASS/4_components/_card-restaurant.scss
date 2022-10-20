@@ -1,23 +1,24 @@
 .card-container {
 
-  a:nth-child(2) img {
-   object-position: 50% 80%;
+  > div:nth-child(2) img {
+   object-position: 50% 70%;
  }
 
-  a:nth-child(3) img {
+  > div:nth-child(3) img {
     object-position: 50% 60%;
   }
 
-  a:nth-child(4) img {
-    object-position: bottom;
+  > div:nth-child(4) img {
+    object-position: 0% 70%;
   }
 
-  a:nth-child(5) img {
-    object-position: bottom;
+  > div:nth-child(5) img {
+    object-position:50% 60%;
   }
   .restaurant-card {
     position:relative;
-    width: 337px;
+    min-width: 337px;
+    width:800px;
     height: 253px;
     margin:9px 20px;
     background-color: white;
