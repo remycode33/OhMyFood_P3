@@ -2,7 +2,6 @@ main.layout-menu {
   width:100vw;
   height:fit-content;
   .layout-menu__box-pic {
-    width:100%;
     img{
       position:absolute;
       top:63px;
@@ -21,6 +20,8 @@ main.layout-menu {
     display: flex;
     flex-flow: wrap row;
     justify-content:space-evenly;
+    min-width:370px;
+    max-width:1900px;
     margin-top:250px;
     padding: 0px 0px 83px;
     border-top-left-radius: 36px;
