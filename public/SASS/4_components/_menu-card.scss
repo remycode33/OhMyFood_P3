@@ -33,9 +33,9 @@
       max-width: 377px;
       overflow: hidden;
       display:flex;
-      flex-flow:row wrap;
+      flex-flow:row nowrap;
       justify-content:space-between;
-      height:fit-content;
+      height:74px;///
       background-color:white;
       border-radius:15px;
       margin:15px 0px;
@@ -48,9 +48,44 @@
       animation-iteration-count: 1;
       animation-timing-function: ease-in;
       animation-fill-mode: forwards;
+
+///////HIDE THE TEXT OF THE CARD_DISH WHEN THERE ISN'T PLACE ENOUGH
+
+      &:hover > .card-dish__box-text .box-text__name{
+        width: calc(369px - 100px);
+        transition-property: width;
+        transition-duration: 0.7s;
+        transition-timing-function: cubic-bezier(0,1.04,.95,.96);
+      }
+      &:not(:hover) > .card-dish__box-text__name {
+        width: calc(369px - 50px);
+        transition-property: width;
+        transition-duration: 0.7s;
+        transition-timing-function: cubic-bezier(0,1.04,.95,.96);
+      }
+
+      &:hover > .card-dish__box-text > .box-text__name + .box-text__description{
+        width: calc(369px - 100px);
+        transition-property: width;
+        transition-duration: 0.7s;
+        transition-timing-function: cubic-bezier(0,1.04,.95,.96);
+      }
+      &:not(:hover) > .card-dish__box-text > .box-text__name + .box-text__description {
+        width: calc(369px - 50px);
+        transition-property: width;
+        transition-duration: 0.7s;
+        transition-timing-function: cubic-bezier(0,1.04,.95,.96);
+      }
+
+
+//////
+
+
+
+
       &:hover > div:nth-child(2) {
         position:relative;
-        transform:translatex(-50px);
+        //transform:translatex(-50px);
         transition-property: transform;
         transition-duration: 0.7s;
         transition-timing-function: cubic-bezier(0,1.04,.95,.96);
@@ -75,22 +110,25 @@
         }
       }
       &__box-text {
-        padding:10px 0px 10px 8px;
-        display:flex;
-        flex-flow:column wrap;
-        max-width:70%;
-      }
+        padding: 10px 0px 10px 8px;
+        display: flex;
+        flex-flow: column wrap;
+        width: calc(377px - 50px);
+        position:relative;
+
         .box-text__name {
-          max-width:100%;
-          white-space:nowrap;
-          overflow:hidden;
-          text-overflow:ellipsis ;
+          width: calc(377px - 50px);
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
         }
-      .box-text__description {
-          max-width:100%;
-          overflow:hidden;
-          text-overflow:ellipsis ;
-          white-space:nowrap;
+
+        .box-text__description {
+          width: calc(377px - 50px);
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
       }
       &__box-price {
         display:flex;
@@ -98,7 +136,7 @@
 
         .box-price__price {
           position:relative;
-          left: 50px;
+          //left: 50px;
           width:fit-content;
           height:fit-content;
           padding-bottom:10px;
@@ -112,7 +150,7 @@
           align-content:center;
           position:relative;
           overflow:hidden;
-          transform:translatex(50px);
+          //transform:translatex(50px);
           width:50px;
           height:100%;
           border-top-right-radius: 15px;
